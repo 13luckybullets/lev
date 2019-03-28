@@ -18,7 +18,7 @@ def get_recognition(file):
     return result
 
 
-@app.route("/",  methods=['POST', 'GET'])
+@app.route("/recognition/",  methods=['POST', 'GET'])
 def recognition():
     res = {'err': "nothing to show"}
     if request.method == 'POST':
