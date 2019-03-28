@@ -23,7 +23,7 @@ def recognition():
     res = {'err': "nothing to show"}
     if request.method == 'POST':
         f = request.files['file']
-        res = get_recognition(f)
+        res = {'is_food': get_recognition(f).get('is_food', 'something_go_wrong')}
 
     response = app.response_class(
         response=json.dumps(res),
